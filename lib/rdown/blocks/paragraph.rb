@@ -9,6 +9,11 @@ module Rdown
       def initialize(source:)
         @source = source
       end
+
+      # @return [String]
+      def content
+        source.strip
+      end
     end
   end
 end

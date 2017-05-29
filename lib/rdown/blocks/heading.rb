@@ -12,6 +12,11 @@ module Rdown
         @level = level
         @source = source
       end
+
+      # @return [String]
+      def content
+        source[level + 1 .. -1].strip
+      end
     end
   end
 end
