@@ -1,4 +1,5 @@
 require "rdown/nodes/root"
+require "rdown/tokenizers/heading"
 require "rdown/tokenizers/paragraph"
 
 module Rdown
@@ -30,6 +31,7 @@ module Rdown
     # @return [Array<Rdown::Tokenizers::BaseTokenizer>]
     def tokenizers
       @tokenizers ||= [
+        ::Rdown::Tokenizers::Heading.new,
         ::Rdown::Tokenizers::Paragraph.new,
       ]
     end
